@@ -12,7 +12,7 @@ conn_obj=mysql.connector.connect(
 cursor_obj=conn_obj.cursor(dictionary=True)
 #user tables
 cursor_obj.execute("""CREATE TABLE IF NOT EXISTS users3(
-                   id INT PRIMARY KEYAUTO_INCREMENT,name VARCHAR(100),
+                   id INT PRIMARY KEY AUTO_INCREMENT,name VARCHAR(100),
                    email VARCHAR(100) UNIQUE,password VARCHAR(100))""")
 ########## files table
 cursor_obj.execute("""CREATE TABLE IF NOT EXIST files3(
